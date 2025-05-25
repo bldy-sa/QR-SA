@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>BALADY.GOV.SA | بلدي</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("to");
+    if (target) {
+      setTimeout(() => {
+        window.location.href = target;
+      }, 3000);
+    }
+  </script>
+</head>
+<body>
+  <h1>BALADY.GOV.SA | بلدي</h1>
+  <p>جاري تحويلك للموقع المطلوب...</p>
+  <p>If you are not redirected automatically, <a id="link" href="#">click here</a></p>
+
+  <script>
+    const target = new URLSearchParams(window.location.search).get("to");
+    if (target) {
+      document.getElementById("link").href = target;
+    } else {
+      document.getElementById("link").innerText = "الرابط غير موجود.";
+    }
+  </script>
+</body>
+</html>
